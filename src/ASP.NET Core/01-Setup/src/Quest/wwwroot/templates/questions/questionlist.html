@@ -75,35 +75,17 @@
                     <tr ng-repeat="question in questions" style="cursor:pointer;">
 
 
-
                         <td>
-
-                            {{question.question}}
-
+                            {{question.value}}
+                            <label ng-show="question.isPrivate" class="label label-danger">Private</label>
                         </td>
 
+                        <td>{{question.correctAnswer | limitTo:20}}<span ng-show="question.correctAnswer.length > 20">...</span></td>
+
+                        <td>{{question.createdOn | date:'short'}}</td>
                         <td>
-
-                            {{question.questiontype}}
-
-                        </td>
-
-                        <td>
-
-                            {{question.answertype}}
-
-                        </td>
-
-                        <td>
-
-                            {{question.answer}}
-
-                        </td>
-
-                        <td>
-
-                            {{question.createdOn | date:'short'}}
-
+                            <i class="glyphicon glyphicon-trash" ng-click="deleteQuestion($event, question)"></i>
+                            <span ng-show="question.deletingQuestion" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
                         </td>
 
                     </tr>

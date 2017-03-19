@@ -1,12 +1,15 @@
 ﻿<html>
   <head>
-      <title>Angular</title>
+      <title>AngularJS Tutorial</title>
+      <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="~/css/site.css" />
+      <link rel="stylesheet" href="~/lib/angular-bootstrap/ui-bootstrap-csp.css" />
+      <link rel="stylesheet" href="~/lib/angular-bootstrap-toggle/dist/angular-bootstrap-toggle.min.css" />
+
   </head>
     
-    <body ng-app="app">
-        <div ng-controller="appCtrl">
-            {{title}}
-        </div>
+    <body ng-app="quest">
+            <div ng-include="'/templates/questions/questionList.html'"></div>
 
 
         <script src="~/lib/jquery/dist/jquery.min.js"></script>

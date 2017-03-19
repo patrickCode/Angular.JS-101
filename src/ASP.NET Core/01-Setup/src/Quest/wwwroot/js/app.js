@@ -1,5 +1,4 @@
-﻿var app = angular.module("app", []);
-
-app.controller("appCtrl", function ($scope) {
-    $scope.title = "My Application";
+﻿var app = angular.module('quest', []);
+app.controller('questionlistctrl', function ($scope) {
+    $scope.paneltitle = "My Questions"
 });

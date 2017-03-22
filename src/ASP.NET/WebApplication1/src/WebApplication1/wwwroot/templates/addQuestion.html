@@ -1,0 +1,32 @@
+﻿<h3>Add new new question here</h3>
+
+<form name="questionForm" ng-submit="submitQuestion()">
+    <div>
+        <label for="qval">Question Value</label>
+        <input type="text" name="questionValue" id="qval" ng-model="question.value" max-len required />
+        <div style="color: red" ng-messages="questionForm.questionValue.$error" ng-show="questionForm.questionValue.$touched">
+            <div ng-messages-include="templates/invalidMessages.html"></div>
+        </div>
+    </div>
+    <div>
+        <label for="aval">Answer</label>
+        <input type="text" name="answerValue" id="qval" ng-model="question.answer" required />
+        <div style="color: red" ng-messages="questionForm.answerValue.$error"  ng-show="questionForm.answerValue.$touched">
+            <div ng-messages-include="templates/invalidMessages.html"></div>
+        </div>
+    </div>
+    <div>
+        <label for="uval">Question URL</label>
+        <input type="url" name="urlValue" id="uval" ng-model="question.url" required />
+        <div style="color: red" ng-messages="questionForm.urlValue.$error"  ng-show="questionForm.urlValue.$touched">
+            <div ng-messages-include="templates/invalidMessages.html"></div>
+        </div>
+    </div>
+
+    <div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<pre>{{questionForm | json}}</pre>

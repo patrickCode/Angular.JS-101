@@ -1,0 +1,17 @@
+﻿<button type="button" ng-click="addQuestion()">Add New Question</button>
+<table>
+    <thead>
+        <tr>
+            <th>Question</th>
+            <th>Level</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="question in questions">
+            <td>{{question.value}}</td>
+            <td><level-show level-num="{{question.difficultLevel}}"></level-show></td>
+        </tr>
+    </tbody>
+</table>
+
+<button ng-click="getQuestions()">GET</button>

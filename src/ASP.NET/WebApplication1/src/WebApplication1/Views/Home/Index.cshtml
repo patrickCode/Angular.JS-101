@@ -5,14 +5,23 @@
     </title>
 </head>
 <body>
-
+    
     <div ng-app="app">
-        <div ng-controller="appCtrl">
-            
-        </div>
+        <div ui-view></div>
     </div>
 
     <script src="~/lib/angular/angular.js"></script>
+    <script src="~/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="~/lib/angular-messages/angular-messages.js"></script>
+    <script src="~/lib/adal-angular/dist/adal.min.js"></script>
+    <script src="~/lib/adal-angular/dist/adal-angular.min.js"></script>
+    
     <script src="~/js/app.js"></script>
+
+    <script src="~/js/common/levelShow.dir.js"></script>
+    <script src="~/js/common/maxLen.dir.js"></script>
+    <script src="~/js/questions/questions.data.js"></script>
+    <script src="~/js/questions/questions.ctrl.js"></script>
+    <script src="~/js/questions/addQuestions.ctrl.js"></script>
 </body>
 </html>

@@ -6,6 +6,11 @@
     "jquery": "2.2.0",
     "jquery-validation": "1.14.0",
     "jquery-validation-unobtrusive": "3.2.6",
-    "angular": "1.6.3"
+    "angular": "1.6.3",
+    "angular-ui-router": "0.4.2",
+    "angular-messages": "1.6.3",
+    "adal-angular": "1.0.14",
+    "qunit": "2.2.1",
+    "angular-mocks": "1.6.3"
   }
 }
